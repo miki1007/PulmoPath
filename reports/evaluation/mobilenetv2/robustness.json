@@ -1,0 +1,465 @@
+{
+  "model": "mobilenetv2.keras",
+  "test_examples": 359,
+  "perturbation_definitions": {
+    "brightness": "Pillow brightness factor 0.92 or 1.08",
+    "contrast": "Pillow contrast factor 0.90 or 1.10",
+    "resizing": "downsample to 75% of model input size, then resize back using nearest, bilinear, or bicubic interpolation",
+    "compression": "JPEG quality 85",
+    "color": "RGB channel gain of +/-4% for red and blue"
+  },
+  "results": {
+    "baseline_bicubic": {
+      "accuracy": 0.947075208913649,
+      "macro_f1": 0.9469679717380514,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9385964912280702,
+          "recall": 0.8991596638655462,
+          "f1": 0.9184549356223176,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.904,
+          "recall": 0.9416666666666667,
+          "f1": 0.9224489795918367,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          107,
+          12
+        ],
+        [
+          0,
+          7,
+          113
+        ]
+      ]
+    },
+    "brightness_minus_8pct": {
+      "accuracy": 0.9498607242339833,
+      "macro_f1": 0.949719495091164,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.954954954954955,
+          "recall": 0.8907563025210085,
+          "f1": 0.9217391304347826,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.8984375,
+          "recall": 0.9583333333333334,
+          "f1": 0.9274193548387096,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          106,
+          13
+        ],
+        [
+          0,
+          5,
+          115
+        ]
+      ]
+    },
+    "brightness_plus_8pct": {
+      "accuracy": 0.9526462395543176,
+      "macro_f1": 0.9525768743689853,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9322033898305084,
+          "recall": 0.9243697478991597,
+          "f1": 0.9282700421940928,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.9256198347107438,
+          "recall": 0.9333333333333333,
+          "f1": 0.9294605809128631,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          110,
+          9
+        ],
+        [
+          0,
+          8,
+          112
+        ]
+      ]
+    },
+    "contrast_minus_10pct": {
+      "accuracy": 0.9498607242339833,
+      "macro_f1": 0.9496418036241044,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9719626168224299,
+          "recall": 0.8739495798319328,
+          "f1": 0.9203539823008849,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.8863636363636364,
+          "recall": 0.975,
+          "f1": 0.9285714285714286,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          104,
+          15
+        ],
+        [
+          0,
+          3,
+          117
+        ]
+      ]
+    },
+    "contrast_plus_10pct": {
+      "accuracy": 0.9498607242339833,
+      "macro_f1": 0.9497899159663866,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9173553719008265,
+          "recall": 0.9327731092436975,
+          "f1": 0.925,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.9322033898305084,
+          "recall": 0.9166666666666666,
+          "f1": 0.9243697478991597,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          111,
+          8
+        ],
+        [
+          0,
+          10,
+          110
+        ]
+      ]
+    },
+    "resize_nearest": {
+      "accuracy": 0.9303621169916435,
+      "macro_f1": 0.9296690620383613,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9795918367346939,
+          "recall": 0.8067226890756303,
+          "f1": 0.8847926267281107,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.8368794326241135,
+          "recall": 0.9833333333333333,
+          "f1": 0.9042145593869731,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          96,
+          23
+        ],
+        [
+          0,
+          2,
+          118
+        ]
+      ]
+    },
+    "resize_bilinear": {
+      "accuracy": 0.9526462395543176,
+      "macro_f1": 0.9524603494977506,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9722222222222222,
+          "recall": 0.8823529411764706,
+          "f1": 0.9251101321585903,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.8931297709923665,
+          "recall": 0.975,
+          "f1": 0.9322709163346613,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          14
+        ],
+        [
+          0,
+          3,
+          117
+        ]
+      ]
+    },
+    "resize_bicubic": {
+      "accuracy": 0.9554317548746518,
+      "macro_f1": 0.9552711161122441,
+      "per_class": {
+        "lung_n": {
+          "precision": 0.9917355371900827,
+          "recall": 1.0,
+          "f1": 0.995850622406639,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9401709401709402,
+          "recall": 0.9243697478991597,
+          "f1": 0.9322033898305084,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.9338842975206612,
+          "recall": 0.9416666666666667,
+          "f1": 0.9377593360995851,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          1,
+          110,
+          8
+        ],
+        [
+          0,
+          7,
+          113
+        ]
+      ]
+    },
+    "jpeg_quality_85": {
+      "accuracy": 0.9554317548746518,
+      "macro_f1": 0.9553625624503899,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9401709401709402,
+          "recall": 0.9243697478991597,
+          "f1": 0.9322033898305084,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.9262295081967213,
+          "recall": 0.9416666666666667,
+          "f1": 0.9338842975206612,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          110,
+          9
+        ],
+        [
+          0,
+          7,
+          113
+        ]
+      ]
+    },
+    "color_gain_warm": {
+      "accuracy": 0.9415041782729805,
+      "macro_f1": 0.9413568887253098,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9375,
+          "recall": 0.8823529411764706,
+          "f1": 0.9090909090909091,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.889763779527559,
+          "recall": 0.9416666666666667,
+          "f1": 0.9149797570850202,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          14
+        ],
+        [
+          0,
+          7,
+          113
+        ]
+      ]
+    },
+    "color_gain_cool": {
+      "accuracy": 0.9554317548746518,
+      "macro_f1": 0.9553625624503899,
+      "per_class": {
+        "lung_n": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "lung_aca": {
+          "precision": 0.9186991869918699,
+          "recall": 0.9495798319327731,
+          "f1": 0.9338842975206612,
+          "support": 119
+        },
+        "lung_scc": {
+          "precision": 0.9482758620689655,
+          "recall": 0.9166666666666666,
+          "f1": 0.9322033898305084,
+          "support": 120
+        }
+      },
+      "confusion_matrix": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          113,
+          6
+        ],
+        [
+          0,
+          10,
+          110
+        ]
+      ]
+    }
+  },
+  "caveat": "These controlled perturbations do not establish clinical robustness or external generalization."
+}

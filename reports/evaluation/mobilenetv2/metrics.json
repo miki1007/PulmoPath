@@ -1,0 +1,95 @@
+{
+  "model": "mobilenetv2.keras",
+  "test_examples": 359,
+  "accuracy": 0.947075208913649,
+  "per_class": {
+    "lung_n": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120,
+      "roc_auc_ovr": 1.0,
+      "average_precision_ovr": 1.0
+    },
+    "lung_aca": {
+      "precision": 0.9385964912280702,
+      "recall": 0.8991596638655462,
+      "f1": 0.9184549356223176,
+      "support": 119,
+      "roc_auc_ovr": 0.991281512605042,
+      "average_precision_ovr": 0.9850259388109562
+    },
+    "lung_scc": {
+      "precision": 0.904,
+      "recall": 0.9416666666666667,
+      "f1": 0.9224489795918367,
+      "support": 120,
+      "roc_auc_ovr": 0.9914574616457461,
+      "average_precision_ovr": 0.9818730837162444
+    }
+  },
+  "macro_average": {
+    "precision": 0.94753216374269,
+    "recall": 0.9469421101774044,
+    "f1-score": 0.9469679717380514,
+    "support": 359.0
+  },
+  "weighted_average": {
+    "precision": 0.9475570541953771,
+    "recall": 0.947075208913649,
+    "f1-score": 0.9470473952369811,
+    "support": 359.0
+  },
+  "confusion_matrix_rows_true_columns_predicted": [
+    [
+      120,
+      0,
+      0
+    ],
+    [
+      0,
+      107,
+      12
+    ],
+    [
+      0,
+      7,
+      113
+    ]
+  ],
+  "normalized_confusion_matrix_rows_true_columns_predicted": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.89916,
+      0.10084
+    ],
+    [
+      0.0,
+      0.058333,
+      0.941667
+    ]
+  ],
+  "group_bootstrap": {
+    "status": "group bootstrap percentile intervals",
+    "groups": 352,
+    "draws": 1000,
+    "accuracy_95_percent_interval": [
+      0.9217877094972067,
+      0.966761298419063
+    ],
+    "macro_f1_95_percent_interval": [
+      0.9220959936461457,
+      0.9670334637571629
+    ],
+    "unit": "duplicate_cluster"
+  },
+  "limitations": [
+    "This is an internal held-out dataset estimate, not external or clinical validation.",
+    "Model scores are not calibrated disease probabilities."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "lung_n": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 120.0
+  },
+  "lung_aca": {
+    "precision": 0.9469026548672567,
+    "recall": 0.8991596638655462,
+    "f1-score": 0.9224137931034483,
+    "support": 119.0
+  },
+  "lung_scc": {
+    "precision": 0.9047619047619048,
+    "recall": 0.95,
+    "f1-score": 0.926829268292683,
+    "support": 120.0
+  },
+  "accuracy": 0.9498607242339833,
+  "macro avg": {
+    "precision": 0.9505548532097204,
+    "recall": 0.9497198879551819,
+    "f1-score": 0.9497476871320437,
+    "support": 359.0
+  },
+  "weighted avg": {
+    "precision": 0.9505650264641562,
+    "recall": 0.9498607242339833,
+    "f1-score": 0.9498238261126248,
+    "support": 359.0
+  }
+}
