@@ -147,7 +147,7 @@ The robustness script evaluates brightness ±8%, contrast ±10%, 96×96-to-128×
 python -m streamlit run app.py
 ```
 
-The app displays the supplied World Link College logo, supports one PNG/JPEG/TIFF image at a time, and includes bundled held-out test examples for quick testing. Its result card explains the three model scores in plain language and offers a Grad-CAM overlay with an opacity control and limitations. The app does not save or transmit uploaded images. It warns that CT scans and ordinary images are unsupported; its color check is only a heuristic and cannot reliably detect every out-of-distribution image. See [Local demo guide](docs/APP_GUIDE.md) for score and heatmap interpretation.
+The app displays the supplied World Link College logo and supports one PNG/JPEG/TIFF image at a time. If the dataset and split manifest are present locally, it also offers held-out test examples; those image files are not included in the source ZIP. Its result card explains the three model scores in plain language and offers a Grad-CAM overlay with an opacity control and limitations. The app does not save or transmit uploaded images. It warns that CT scans and ordinary images are unsupported; its color check is only a heuristic and cannot reliably detect every out-of-distribution image. See [Local demo guide](docs/APP_GUIDE.md) for score and heatmap interpretation.
 
 ## Project structure
 
