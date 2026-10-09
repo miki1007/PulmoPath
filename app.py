@@ -450,8 +450,7 @@ def _prediction_page(selected_model: Path | None, metadata: dict) -> None:
     models = _available_models()
     if not models:
         st.warning(
-            "No trained checkpoints were found. The project ZIP normally includes the baseline and MobileNetV2 weights. "
-            "Check that the artifacts/models folder was kept beside app.py."
+            "No trained checkpoint is included in the GitHub ZIP. Add a trained .keras model under artifacts/models/ or follow the README training steps."
         )
 
     input_column, result_column = st.columns([1.02, 0.98], gap="large")
@@ -543,7 +542,7 @@ def _prediction_page(selected_model: Path | None, metadata: dict) -> None:
             if original is None:
                 st.caption("Select an image to see its predicted dataset label and class scores.")
             elif selected_model is None:
-                st.warning("No model checkpoint is available. Keep the artifacts/models folder with the project.")
+                st.warning("No trained checkpoint is included. Train a model using the README steps, or place its .keras file under artifacts/models/.")
             elif prediction_error:
                 st.error(f"Could not make a prediction: {prediction_error}")
                 st.caption("Check the TensorFlow installation and verify that the checkpoint belongs to this project.")
